@@ -1,9 +1,8 @@
+![Logseq Badge](https://img.shields.io/badge/logseq-%2385C8C8?style=for-the-badge&logo=logseq&logoColor=black)
+
 # Logseq Things3 Importer Plugin
 
 A Logseq plugin to import tasks from Things3 into your Logseq graph.
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Logseq Plugin](https://img.shields.io/badge/Logseq-Plugin-green)](https://github.com/logseq/logseq)
 
 This plugin allows Logseq users to import their tasks from Things3, enhancing task management and integration between the two platforms.
 
