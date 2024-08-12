@@ -2,10 +2,11 @@ import { SettingSchemaDesc } from '@logseq/libs/dist/LSPlugin.user'
 
 export const settings: SettingSchemaDesc[] = [
   {
-    key: 'sampleSetting',
+    key: 'fileName',
     type: 'string',
-    default: 'This is a sample setting',
-    title: 'Sample Setting',
-    description: 'Modify settings.ts accordingly.',
+    default: 'main.sqlite',
+    title: 'Default Things3 SQLite Filename',
+    description:
+      'Change the filename to whichever is your backup filename to import tasks from.',
   },
 ]

@@ -1,11 +1,11 @@
 {
-  "name": "<insert-plugin-name>",
-  "author": "",
+  "name": "logseq-things3-plugin",
+  "author": "benjypng",
   "description": "",
   "license": "MIT",
   "logseq": {
-    "id": "<insert-plugin-name>",
-    "title": "<insert-plugin-name>",
+    "id": "logseq-things3-plugin",
+    "title": "logseq-things3-plugin",
     "icon": "./icon.svg",
     "main": "dist/index.html"
   },
@@ -23,7 +23,7 @@
         "@semantic-release/github",
         {
           "assets": [
-            "<insert-plugin-name>.zip"
+            "logseq-things3-plugin.zip"
           ]
         }
       ]
@@ -53,6 +53,7 @@
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.0",
     "vite-plugin-logseq": "^1.1.2",
+    "vite-plugin-static-copy": "^1.0.6",
     "vite-tsconfig-paths": "^5.0.0"
   }
 }
