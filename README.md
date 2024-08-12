@@ -2,9 +2,9 @@
 
 # Logseq Things3 Importer Plugin
 
-A Logseq plugin to import tasks from Things3 into your Logseq graph.
+If you use Things3 simply for quick capture on your mobile device, this plugin helps to import tasks from Things3 into your Logseq graph.
 
-This plugin allows Logseq users to import their tasks from Things3, enhancing task management and integration between the two platforms.
+![](/screenshots/demo.gif)
 
 ## Features
 
@@ -21,7 +21,7 @@ This plugin allows Logseq users to import their tasks from Things3, enhancing ta
 
 ## Setup
 
-Due to the lack of an official API from Things3, some manual setup is required:
+Due to the lack of an official API from Things3, some manual workaround is required:
 
 1. Locate your Things3 database file at:
    ```
@@ -30,6 +30,8 @@ Due to the lack of an official API from Things3, some manual setup is required:
 2. Create a copy of this `main.sqlite` file in a directory of your choice.
    - You may want to create a custom script to automate this process.
 3. Remember the location of this copy, as you'll need to select it when importing tasks.
+
+> The plugin pulls from this file, so you need to sync it **manually** before you run the plugin.
 
 ## Usage
 
