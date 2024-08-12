@@ -17,6 +17,14 @@ const main = async () => {
   }
 
   logseq.Editor.registerSlashCommand('Import from Things', async (e) => {
+    logseq.UI.showMsg(
+      'Sync your Things3 sqlite file before proceeding',
+      'warning',
+    )
+
+    // Delay for a while so the user can read the message first
+    await new Promise((resolve) => setTimeout(resolve, 2000))
+
     const buff = await getThingsArrayBuffer()
     const tasks = await readTasks(buff)
     if (!tasks) {

@@ -28,7 +28,11 @@ Due to the lack of an official API from Things3, some manual workaround is requi
    /Users/<user>/Library/Group Containers/JLMPQHK86H.com.culturedcode.ThingsMac/ThingsData-L9V74/Things Database.thingsdatabase/main.sqlite
    ```
 2. Create a copy of this `main.sqlite` file in a directory of your choice.
-   - You may want to create a custom script to automate this process.
+   - You may want to create a custom script to automate this process, for example:
+   ```bash
+   cd /Users/<user>/Library/Group\ Containers/JLMPQHK86H.com.culturedcode.ThingsMac/ThingsData-L9V74/Things\ Database.thingsdatabase
+   cp main.sqlite ~/Desktop/main.sqlite
+   ```
 3. Remember the location of this copy, as you'll need to select it when importing tasks.
 
 > The plugin pulls from this file, so you need to sync it **manually** before you run the plugin.
