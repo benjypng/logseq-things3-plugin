@@ -10,8 +10,8 @@ export const insertTasks = async (uuid: string, tasks: Task[]) => {
 
   // Insert tasks
   await logseq.Editor.insertBatchBlock(uuid, tasksBatchBlock, {
-    before: true,
     sibling: true,
+    before: true,
   })
 
   // Complete tasks using x-callback-URL

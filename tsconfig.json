@@ -21,6 +21,9 @@
 		"incremental": true,
 		"noUncheckedIndexedAccess": true,
 		"baseUrl": "./",
+		"typeRoots": [
+			"./"
+		],
 		"paths": {
 			"../*": [
 				"src/*"
