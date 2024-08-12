@@ -1,8 +1,9 @@
 import '@logseq/libs'
-import { settings } from './settings'
+
 import { getThingsArrayBuffer } from './services/get-things-arr-buff'
-import { readTasks } from './services/read-tasks'
 import { insertTasks } from './services/insert-tasks-in-graph'
+import { readTasks } from './services/read-tasks'
+import { settings } from './settings'
 
 const main = async () => {
   console.log('logseq-things3-plugin loaded')

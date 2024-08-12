@@ -3,8 +3,8 @@ type RawTask = [string, string, number, number, number]
 export interface Task {
   uuid: string
   title: string
-  creationDate: number // Convert Unix timestamp to Date object
-  userModificationDate: number // Convert Unix timestamp to Date object
+  creationDate: number
+  userModificationDate: number
   status: number
 }
 
