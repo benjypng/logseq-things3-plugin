@@ -1,9 +1,12 @@
 import { Task } from './read-tasks'
 
 export const insertTasks = async (uuid: string, tasks: Task[]) => {
-  const tasksBatchBlock = tasks.map((task) => ({
-    content: `TODO ${task.title}`,
-  }))
+  const tasksBatchBlock = tasks.map((task) => {
+    const defaultTag = logseq.settings!.defaultTag as string
+    return {
+      content: `TODO ${task.title}${defaultTag.length > 0 ? ` ${defaultTag}` : ''}`,
+    }
+  })
 
   // Insert tasks
   await logseq.Editor.insertBatchBlock(uuid, tasksBatchBlock, {

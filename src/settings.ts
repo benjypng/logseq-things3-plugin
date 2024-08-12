@@ -16,4 +16,12 @@ export const settings: SettingSchemaDesc[] = [
     description:
       'Change the filename to whichever is your backup filename to import tasks from.',
   },
+  {
+    key: 'defaultTag',
+    type: 'string',
+    default: 'inbox',
+    title: 'Default Tag',
+    description:
+      'If indicated, all tasks imported from Things3 will have this tag. If left blank, no tags will be appended.',
+  },
 ]
