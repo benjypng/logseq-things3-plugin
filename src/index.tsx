@@ -4,9 +4,17 @@ import { getThingsArrayBuffer } from './services/get-things-arr-buff'
 import { insertTasks } from './services/insert-tasks-in-graph'
 import { readTasks } from './services/read-tasks'
 import { settings } from './settings'
+import { oneWaySync } from './features/one-way-sync'
 
 const main = async () => {
   console.log('logseq-things3-plugin loaded')
+
+  if (
+    (logseq.settings!.oneWayTag as string) &&
+    (logseq.settings!.oneWayTag as string).length !== 0
+  ) {
+    oneWaySync()
+  }
 
   await logseq.Experiments.loadScripts(
     'https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js',

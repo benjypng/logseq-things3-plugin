@@ -9,6 +9,14 @@ export const settings: SettingSchemaDesc[] = [
     description: `In Things3, go to settings. Under General, enable Things URLs. Click 'Manage' and copy the token and paste it here. `,
   },
   {
+    key: 'oneWayTag',
+    type: 'string',
+    default: 'shopping',
+    title: 'One-way Sync Tag',
+    description:
+      'If set, blocks with this tag will be automatically pushed to Things3.',
+  },
+  {
     key: 'fileName',
     type: 'string',
     default: 'main.sqlite',
