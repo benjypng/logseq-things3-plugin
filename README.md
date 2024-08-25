@@ -1,55 +1,19 @@
 ![Logseq Badge](https://img.shields.io/badge/logseq-%2385C8C8?style=for-the-badge&logo=logseq&logoColor=black)
 
-# Logseq Things3 Importer Plugin
+# Overview
 
-If you use Things3 simply for quick capture on your mobile device, this plugin helps to import tasks from Things3 into your Logseq graph.
+Sync (one-way) your tasks to Things3, e.g. a shopping list if accessing Logseq on the go is less convenient.
 
-![](/screenshots/demo.gif)
-
-## Features
-
-- Import Tasks from Things3 to Logseq
-- Custom tag option for imported tasks
-- Simple slash command integration
-
-## Installation
-
-1. Open Logseq
-2. Go to Settings > Plugins
-3. Search for "Things3 Importer"
-4. Click Install
+> Note: The import from Things3 has been deprecated in v2 given the complexity of the manual workaround. Instead, I've added a [bash script](./gists/script.sh) that you can use with Alfred to import these tasks on the file system. The script simply imports the tasks in your `Inbox` to Logseq's daily notes page. Before using the script, amend it to add your real Things3 API token.
 
 ## Setup
 
-Due to the lack of an official API from Things3, some manual workaround is required:
-
-1. Locate your Things3 database file at:
-   ```
-   /Users/<user>/Library/Group Containers/JLMPQHK86H.com.culturedcode.ThingsMac/ThingsData-L9V74/Things Database.thingsdatabase/main.sqlite
-   ```
-2. Create a copy of this `main.sqlite` file in a directory of your choice.
-   - You may want to create a custom script to automate this process, for example:
-   ```bash
-   cd /Users/<user>/Library/Group\ Containers/JLMPQHK86H.com.culturedcode.ThingsMac/ThingsData-L9V74/Things\ Database.thingsdatabase
-   cp main.sqlite ~/Desktop/main.sqlite
-   ```
-3. Remember the location of this copy, as you'll need to select it when importing tasks.
-
-> The plugin pulls from this file, so you need to sync it **manually** before you run the plugin.
+1. Enter your Things3 API token for use with their x-callback-url.
+2. Indicate the tag that will define the block to be automatically pushed to Things3.
 
 ## Usage
 
-1. In Logseq, place your cursor where you want to import tasks.
-2. Type `/Import Things3 tasks` to activate the import command.
-3. Select the folder containing your copied `main.sqlite` file when prompted.
-4. Tasks will be imported into your Logseq graph at the cursor location.
-
-## Configuration
-
-In the plugin settings, you can:
-
-- Set a custom tag for imported tasks (optional)
-- Configure import frequency or other preferences
+1. In Logseq, simply tag blocks that you want to automatically push to Things3.
 
 ## Support
 
@@ -57,13 +21,3 @@ If you find this plugin useful, consider supporting the developer:
 
 - [:gift_heart: Sponsor this project on Github](https://github.com/sponsors/hkgnp)
 - [:coffee: Buy me a coffee](https://www.buymeacoffee.com/hkgnp.dev)
-
-## Issues and Contributions
-
-For bug reports, feature requests, or contributions, please visit the [GitHub repository](https://github.com/hkgnp/logseq-zotero-plugin).
-
-*Note: This repository is currently not taking in any pull requests.*
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
